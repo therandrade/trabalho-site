@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 /* Estilos do body */
 body {
     font-family: Arial, sans-serif;
@@ -11,7 +11,59 @@ body {
     color: #333;
     text-align: center;
 }
- 
+
+/* Estilos para a imagem pequena */
+.imagem-pequena {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 154px; /* Tamanho de largura */
+    height: 83px; /* Tamanho de altura */
+    z-index: 100; /* Garante que a imagem fique por cima de outros elementos */
+}
+
+/* Estilos para a barra de pesquisa */
+.barra-pesquisa {
+    position: absolute;
+    top: 20px; /* Ajuste conforme necessário */
+    left: 180px; /* Posição da barra de pesquisa */
+    width: 736px; /* Tamanho da barra de pesquisa */
+    height: 67px;
+    background-color: #ffffff; /* Cor de fundo da barra */
+    border-radius: 10px; /* Arredondamento nas bordas */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 15px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra da barra */
+}
+
+/* Estilo do botão "X" */
+.btn-fechar {
+    background: none;
+    border: none;
+    color: #9747ff; /* Cor roxa */
+    font-size: 18px; /* Tamanho da fonte do "X" */
+    margin-left: 10px; /* Espaçamento à esquerda do botão "X" */
+    cursor: pointer; /* Cursor de pointer para o botão */
+}
+
+/* Estilo do input de pesquisa */
+.input-pesquisa {
+    flex: 1; /* Para ocupar o espaço restante */
+    border: none;
+    outline: none;
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo da barra horizontal */
+.barra-horizontal {
+    width: 100%; /* Largura total da página */
+    height: 50px; /* Altura da barra (menor) */
+    background-color: #ffffff; /* Cor da barra (branca) */
+    margin-top: 5px; /* Espaçamento acima da barra */
+}
+
 /* Estilos do header */
 header {
     background: #ffffff;
@@ -19,37 +71,37 @@ header {
     padding: 15px 0;
     text-align: center;
 }
- 
+
 nav h1 {
     margin-bottom: 10px;
 }
- 
+
 nav ul {
     list-style: none;
     padding: 0;
 }
- 
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
- 
+
 nav a {
     color: #ff914d;
     text-decoration: none;
     font-weight: bold;
 }
- 
+
 /* Estilos da seção principal */
 main {
     padding: 20px;
 }
- 
+
 h2 {
     text-align: center;
     margin: 20px 0;
 }
- 
+
 /* Estilos do container de produtos */
 .produtos-container {
     display: flex;
@@ -57,7 +109,7 @@ h2 {
     flex-wrap: wrap;
     margin: 20px 0;
 }
- 
+
 .produto {
     background: rgb(245, 169, 196);
     border: 1px solid #000000;
@@ -69,18 +121,18 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
- 
+
 .produto:hover {
     transform: scale(1.05);
 }
- 
+
 /* Estilos das imagens dos produtos */
 .produto img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
- 
+
 /* Estilos do botão */
 button {
     background-color: #a72828;
@@ -91,11 +143,11 @@ button {
     cursor: pointer;
     transition: background-color 0.2s;
 }
- 
+
 button:hover {
     background-color: #882121;
 }
- 
+
 /* Estilos do footer */
 footer {
     background: #7a1994;
@@ -106,3 +158,5 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
