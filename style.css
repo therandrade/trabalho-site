@@ -13,11 +13,11 @@ body {
 
 .imagem-pequena {
     position: absolute;
-    top: 10px; /* Ajuste conforme necessário */
-    left: 20px; /* Ajuste conforme necessário */
+    top: 10px;
+    left: 20px; 
     width: 140px;
     height: 83px;
-    z-index: 100; /* Para garantir que fique acima da barra horizontal */
+    z-index: 100; 
 }
 
 .barra-pesquisa {
@@ -45,22 +45,22 @@ body {
     color: #000;
 }
 
-/* Botão de fechar da barra de pesquisa - sem fundo inicialmente */
+
 .btn-fechar {
-    background: none; /* Sem fundo por padrão */
+    background: none; 
     border: none;
     color: #9747ff;
     font-size: 18px;
     margin-left: 10px;
     cursor: pointer;
-    padding: 5px; /* Adiciona padding consistente */
-    border-radius: 50%; /* Mantém o arredondamento, mas sem mudar no hover */
-    transition: background-color 0.3s ease; /* Transição suave para o fundo ao fazer hover */
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease; 
 }
 
-/* Hover do botão de fechar */
+
 .btn-fechar:hover {
-    background-color: #d1c4e9; /* Aplica o fundo ao passar o mouse */
+    background-color: #d1c4e9; 
 }
 
 .barra-horizontal {
@@ -69,7 +69,7 @@ body {
     height: 110px;
     background-color: #ffffff;
     margin-bottom: 20px;
-    z-index: 10; /* Mantém a barra abaixo dos ícones */
+    z-index: 10; 
 }
 
 .imagem-horizontal {
@@ -92,11 +92,11 @@ body {
 
 .links-container {
     position: absolute;
-    top: 38px; /* Altere conforme a necessidade */
+    top: 38px; 
     left: 700px;
     display: flex;
     gap: 35px;
-    z-index: 200; /* Mantém os ícones acima da barra horizontal */
+    z-index: 200;
 }
 
 .login-link {
@@ -108,7 +108,7 @@ body {
     display: flex; 
     align-items: center; 
     z-index: 200;
-    margin-left: -20px; /* Ajuste conforme necessário */
+    margin-left: -20px; 
 }
 
 .login-link i {
@@ -250,53 +250,114 @@ footer {
 }
 
 .icone-opcoes {
-    position: absolute; /* Para posicionar em relação à barra */
-    top: 0px; /* Ajuste conforme necessário */
-    right: -25px; /* Ajuste conforme necessário */
-    font-size: 26px; /* Tamanho do ícone */
-    color: #9747ff; /* Cor do ícone, ajuste conforme necessário */
+    position: absolute; 
+    top: 0px;
+    right: -30px; 
+    font-size: 26px; 
+    color: #9747ff; 
     cursor: pointer;
     
 }
 
 .icone-opcoes:hover {
-    color: #FF914D; /* Cor laranja ao passar o mouse */
+    color: #FF914D; 
 }
 
 .popup {
-    display: none; /* Esconde o pop-up inicialmente */
+    display: none; 
     position: absolute;
-    bottom: 70px; /* Ajuste a distância do pop-up em relação ao ícone */
-    right: 10px; /* Posiciona o popup no canto direito */
-    background-color: #ffffff; /* Cor de fundo branca */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 15px; /* Aumenta o espaçamento interno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    z-index: 300; /* Certifique-se de que fique acima de outros elementos */
-    width: 250px; /* Ajuste a largura do popup conforme necessário */
+    top: 100px; 
+    right: 0; 
+    width: 200px; 
+    height: auto; 
+    background-color: white; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 300;
+    padding: 20px; 
 }
 
-.item-popup {
-    text-align: left; /* Alinha os itens à esquerda */
-    margin: 5px 0; /* Adiciona um pequeno espaço entre os itens */
-    font-size: 14px; /* Diminui o tamanho da fonte */
+.popup h2 {
+    margin: 0; 
+    text-align: left; 
 }
 
-.item-popup:nth-child(odd) {
-    color: orange; /* Laranja para itens ímpares */
+.popup p {
+    text-align: left; 
 }
 
-.item-popup:nth-child(even) {
-    color: purple; /* Roxo para itens pares */
+.ver-todos {
+    font-weight: bold; 
+    text-decoration: underline; 
+    color: #9747ff; 
+    cursor: pointer; 
 }
 
-.popup {
-    display: none; /* Mantenha isso */
-    /* Outros estilos */
+.underline {
+    text-decoration: underline; 
+    color: #000; 
 }
 
-/* Para teste, defina para block temporariamente */
-.popup {
-    display: block; /* Altere para block apenas para verificar se aparece */
-    background-color: red; /* Mantenha para verificação */
+.popup a {
+    color: #000000; 
+    text-decoration: underline; 
+    cursor: pointer; 
+}
+
+.popup a:hover {
+    color: #FF914D; 
+}
+
+
+#popup-pesquisa {
+    display: none; 
+    position: absolute; 
+    top: 90px; 
+    left: 180px; 
+    width: 300px; 
+    background-color: white; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 300; 
+    padding: 20px; 
+}
+
+.popup-conteudo {
+    
+    text-align: left; 
+}
+
+.popup-conteudo h2 {
+    margin: 0; 
+    font-size: 18px; 
+    color: #9747ff; 
+}
+
+.underline {
+    text-decoration: underline; 
+    color: #000; 
+    cursor: pointer; 
+}
+
+.underline:hover {
+    color: #FF914D; 
+}
+
+.categoria {
+    display: flex; 
+    align-items: center; 
+    margin: 10px 0; 
+}
+
+.numero {
+    background-color: #FF914D; 
+    border-radius: 50%; 
+    color: white; 
+    width: 30px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 10px; 
+    font-weight: bold; 
 }

@@ -12,7 +12,7 @@
 
     <img src="C:\Users\ESTHEREDUARDAANDRADE\Downloads\PEQUENOS-removebg-preview.png" alt="Imagem Pequena" class="imagem-pequena">
 
-    <div class="barra-pesquisa">
+    <div class="barra-pesquisa" onclick="togglePesquisaPopup()">
         <input type="text" class="input-pesquisa" placeholder="Buscar...">
         <button class="btn-fechar">X</button>
     </div>
@@ -36,16 +36,7 @@
         <div class="icone-opcoes" onclick="togglePopup()">
             <i class="fas fa-ellipsis-v"></i>
         </div>
-        <div class="popup" id="popup">
-            <div class="item-popup">MAIS DESEJADOS</div>
-            <div class="item-popup">BEBÊS</div>
-            <div class="item-popup">MENINAS</div>
-            <div class="item-popup">MENINOS</div>
-            <div class="item-popup">PIJAMAS</div>
-            <div class="item-popup">BAZAR</div>
-        </div>
-        
-        
+
     </div>
 
     <div class="barra-horizontal"></div>
@@ -97,6 +88,78 @@
     <footer>
         <p>&copy; 2024 Pequenos Encantos. Todos os direitos reservados.</p>
     </footer>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-conteudo">
+            <h2>CATEGORIAS</h2>
+                    <p>
+                        <a href="#" class="underline">BÁSICOS</a><br>
+                        <a href="#" class="underline">BERMUDAS</a><br>
+                        <a href="#" class="underline">BLUSAS</a><br>
+                        <a href="#" class="underline">CALÇAS</a><br>
+                        <a href="#" class="underline">CAMISETAS E REGATAS</a><br>
+                        <a href="#" class="underline">CASACOS E JAQUETAS</a><br>
+                        <a href="#" class="underline">CONJUNTO INVERNO</a><br>
+                        <a href="#" class="underline">CONJUNTO VERÃO</a><br>
+                        <a href="#" class="underline">LEGGINGS</a><br>
+                        <a href="#" class="underline">PIJAMAS</a><br>
+                        <a href="#" class="underline">VESTIDO DE INVERNO</a><br>
+                        <a href="#" class="underline">VESTIDO DE VERÃO</a><br>
+                        <br>
+                        <span class="ver-todos">ver todos!</span>
+                    </p>
+                </div>
+            </div>
+ 
+<div id="popup-pesquisa" class="popup">
+    <div class="popup-conteudo">
+        <h2>TEMAS MAIS BUSCADOS</h2>
+        <div class="categoria">
+            <span class="numero">1</span>
+            <a href="#" class="underline">BLUSA</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">2</span>
+            <a href="#" class="underline">CONJUNTO VERÃO</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">3</span>
+            <a href="#" class="underline">BODY</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">4</span>
+            <a href="#" class="underline">REGATA</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">5</span>
+            <a href="#" class="underline">SHORT</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">6</span>
+            <a href="#" class="underline">CALÇA</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">7</span>
+            <a href="#" class="underline">CAMISETA</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">8</span>
+            <a href="#" class="underline">T-SHIRT</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">9</span>
+            <a href="#" class="underline">MANGA LONGA</a>
+        </div>
+        <div class="categoria">
+            <span class="numero">10</span>
+            <a href="#" class="underline">CASACO</a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
 
 </body>
 </html>
