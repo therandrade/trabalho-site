@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pequenos Encantos</title>
@@ -23,24 +24,38 @@
         </div>
 
         <div class="favoritos-link">
-            <i class="fas fa-heart"></i> <!-- Ícone de coração -->
+            <i class="fas fa-heart"></i>
             <span>FAVORITOS</span>
         </div>
         
         <div class="sacola-link">
-            <i class="fas fa-shopping-bag"></i> <!-- Ícone de sacola -->
+            <i class="fas fa-shopping-bag"></i>
             <span>MINHA SACOLA</span>
         </div>
+
+        <div class="icone-opcoes" onclick="togglePopup()">
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="popup" id="popup">
+            <div class="item-popup">MAIS DESEJADOS</div>
+            <div class="item-popup">BEBÊS</div>
+            <div class="item-popup">MENINAS</div>
+            <div class="item-popup">MENINOS</div>
+            <div class="item-popup">PIJAMAS</div>
+            <div class="item-popup">BAZAR</div>
+        </div>
+        
+        
     </div>
 
     <div class="barra-horizontal"></div>
     <img src="C:\Users\ESTHEREDUARDAANDRADE\Pictures\Opera Instantâneo_2024-10-18_075847_www.figma.com.png" alt="Imagem Decorativa" class="imagem-horizontal">
 
     <div class="amor-container">
-        <span class="amor">FRETE GRATÍS A <br> PARTIR DE 100,00</span>
-        <span class="amor">PARCELAMENTO <br> EM ATÉ 5X SEM JUROS</span>
-        <span class="amor">ATÉ 7 DIAS <br> PARA DEVOLVER A COMPRA</span>
-        <span class="amor">SITE CONFÍAVEL <br> COMPRE COM SEGURANÇA</span>
+        <span class="amor"><i class="fas fa-truck" style="color: #FF914D; margin-right: 8px;"></i>FRETE GRATÍS A <br> PARTIR DE 100,00</span>
+        <span class="amor"><i class="fas fa-credit-card" style="color: #FF914D; margin-right: 8px;"></i>PARCELAMENTO <br> EM ATÉ 5X SEM JUROS</span>
+        <span class="amor"><i class="fas fa-clock" style="color: #FF914D; margin-right: 8px;"></i>ATÉ 7 DIAS <br> PARA DEVOLVER A COMPRA</span>
+        <span class="amor"><i class="fas fa-check" style="color: #FF914D; margin-right: 8px;"></i>SITE CONFÍAVEL <br> COMPRE COM SEGURANÇA</span>
     </div>
     
     <main>
@@ -83,6 +98,5 @@
         <p>&copy; 2024 Pequenos Encantos. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
