@@ -4,95 +4,173 @@
     box-sizing: border-box;
 }
 
-/* Estilos do body */
 body {
     font-family: Arial, sans-serif;
     background-color: #dbdbf7;
-    color: #333;
+    color: #000000;
     text-align: center;
 }
 
-/* Estilos para a imagem pequena */
 .imagem-pequena {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 154px; /* Tamanho de largura */
-    height: 83px; /* Tamanho de altura */
-    z-index: 100; /* Garante que a imagem fique por cima de outros elementos */
+    top: 10px; /* Ajuste conforme necessário */
+    left: 20px; /* Ajuste conforme necessário */
+    width: 140px;
+    height: 83px;
+    z-index: 100; /* Para garantir que fique acima da barra horizontal */
 }
 
-/* Estilos para a barra de pesquisa */
 .barra-pesquisa {
     position: absolute;
-    top: 20px; /* Ajuste conforme necessário */
-    left: 180px; /* Posição da barra de pesquisa */
-    width: 736px; /* Tamanho da barra de pesquisa */
-    height: 67px;
-    background-color: #ffffff; /* Cor de fundo da barra */
-    border-radius: 10px; /* Arredondamento nas bordas */
+    top: 25px;
+    left: 180px;
+    width: 480px;
+    height: 50px;
+    background-color: #ebebeb;
+    border-radius: 20px;
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    padding: 0 15px; /* Espaçamento interno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra da barra */
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 150;
 }
 
-/* Estilo do botão "X" */
-.btn-fechar {
-    background: none;
-    border: none;
-    color: #9747ff; /* Cor roxa */
-    font-size: 18px; /* Tamanho da fonte do "X" */
-    margin-left: 10px; /* Espaçamento à esquerda do botão "X" */
-    cursor: pointer; /* Cursor de pointer para o botão */
-}
-
-/* Estilo do input de pesquisa */
 .input-pesquisa {
-    flex: 1; /* Para ocupar o espaço restante */
+    flex: 1;
     border: none;
     outline: none;
-    padding: 10px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ebebeb;
+    color: #000;
 }
 
-/* Estilo da barra horizontal */
-.barra-horizontal {
-    width: 100%; /* Largura total da página */
-    height: 50px; /* Altura da barra (menor) */
-    background-color: #ffffff; /* Cor da barra (branca) */
-    margin-top: 5px; /* Espaçamento acima da barra */
-}
-
-/* Estilos do header */
-header {
-    background: #ffffff;
+/* Botão de fechar da barra de pesquisa - sem fundo inicialmente */
+.btn-fechar {
+    background: none; /* Sem fundo por padrão */
+    border: none;
     color: #9747ff;
-    padding: 15px 0;
-    text-align: center;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px; /* Adiciona padding consistente */
+    border-radius: 50%; /* Mantém o arredondamento, mas sem mudar no hover */
+    transition: background-color 0.3s ease; /* Transição suave para o fundo ao fazer hover */
 }
 
-nav h1 {
-    margin-bottom: 10px;
+/* Hover do botão de fechar */
+.btn-fechar:hover {
+    background-color: #d1c4e9; /* Aplica o fundo ao passar o mouse */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+
+.barra-horizontal {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    z-index: 10; /* Mantém a barra abaixo dos ícones */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.imagem-horizontal {
+    width: 100%;
+    height: auto;
+    margin-top: -20px;
 }
 
-nav a {
-    color: #ff914d;
-    text-decoration: none;
+.palavras-centralizadas {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.palavras-centralizadas span {
+    font-size: 24px;
+    color: #FF914D;
     font-weight: bold;
 }
 
-/* Estilos da seção principal */
+.links-container {
+    position: absolute;
+    top: 38px; /* Altere conforme a necessidade */
+    left: 700px;
+    display: flex;
+    gap: 35px;
+    z-index: 200; /* Mantém os ícones acima da barra horizontal */
+}
+
+.login-link {
+    font-size: 14px;
+    color: #9747ff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px;
+    display: flex; 
+    align-items: center; 
+    z-index: 200;
+    margin-left: -20px; /* Ajuste conforme necessário */
+}
+
+.login-link i {
+    margin-right: 8px; 
+}
+
+.login-link:hover {
+    color: #FF914D;
+}
+
+.favoritos-link {
+    font-size: 14px;
+    color: #9747ff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px;
+    display: flex; 
+    align-items: center;
+    z-index: 200; 
+}
+
+.favoritos-link i {
+    color: #9747ff;
+    margin-right: 8px;
+    transition: color 0.3s ease; 
+    z-index: 200;
+}
+
+.favoritos-link:hover {
+    color: #FF914D; 
+}
+
+.favoritos-link:hover i {
+    color: #FF914D; 
+}
+
+.sacola-link {
+    font-size: 14px;
+    color: #9747ff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px;
+    display: flex; 
+    align-items: center; 
+    z-index: 200;
+}
+
+.sacola-link i {
+    color: #9747ff; 
+    margin-right: 8px;
+    transition: color 0.3s ease; 
+}
+
+.sacola-link:hover {
+    color: #FF914D; 
+}
+
+.sacola-link:hover i {
+    color: #FF914D;
+}
+
 main {
     padding: 20px;
 }
@@ -100,9 +178,16 @@ main {
 h2 {
     text-align: center;
     margin: 20px 0;
+    color: #FF914D;
+    font-size: 24px;
+    transition: color 0.3s ease, font-size 0.3s ease;
 }
 
-/* Estilos do container de produtos */
+h2:hover {
+    color: #9747ff;
+    font-size: 26px;
+}
+
 .produtos-container {
     display: flex;
     justify-content: space-around;
@@ -111,7 +196,7 @@ h2 {
 }
 
 .produto {
-    background: rgb(245, 169, 196);
+    background: #ebebeb;
     border: 1px solid #000000;
     border-radius: 5px;
     padding: 15px;
@@ -126,14 +211,12 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Estilos das imagens dos produtos */
 .produto img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-/* Estilos do botão */
 button {
     background-color: #a72828;
     color: white;
@@ -148,15 +231,24 @@ button:hover {
     background-color: #882121;
 }
 
-/* Estilos do footer */
 footer {
     background: #7a1994;
-    color: rgb(245, 169, 196);
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    color: #ffffff;
+    padding: 10px;
 }
 
+.amor-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 80px;
+}
 
+.amor {
+    color: #ff0000;
+    font-size: 17px !important;
+    background-color: #ebebeb; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    display: inline-block; 
+}

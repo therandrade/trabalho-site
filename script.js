@@ -1,24 +1,12 @@
+// Seleciona o botão "X" e o input da barra de pesquisa
+const btnFechar = document.querySelector('.btn-fechar');
+const inputPesquisa = document.querySelector('.input-pesquisa');
 
-const buttons = document.querySelectorAll('.adicionar');
-const itensCarrinho = document.getElementById('itens-carrinho');
-const totalSpan = document.getElementById('total');
-let total = 0;
- 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        const produto = button.parentElement;
-        const nome = produto.getAttribute('data-nome');
-        const preco = parseFloat(produto.getAttribute('data-preco'));
-       
-        adicionarAoCarrinho(nome, preco);
-    });
+// Adiciona um evento de clique ao botão "X"
+btnFechar.addEventListener('click', () => {
+    // Limpa o valor do input e restaura o placeholder
+    inputPesquisa.value = ''; // Limpa o valor
+    inputPesquisa.placeholder = 'Buscar...'; // Restaura o placeholder
 });
- 
-function adicionarAoCarrinho(nome, preco) {
-    const item = document.createElement('div');
-    item.textContent = `${nome} - R$ ${preco.toFixed(2)}`;
-    itensCarrinho.appendChild(item);
-   
-    total += preco;
-    totalSpan.textContent = total.toFixed(2);
-}
+
+// Aqui você pode incluir a funcionalidade do carrinho, se necessário.
